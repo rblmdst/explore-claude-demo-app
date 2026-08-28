@@ -12,5 +12,8 @@ export const userRepositoryFactory: () => UserRepository = () => {
     getByEmail: (email: string) => {
       return UserModel.findOne({ email });
     },
+    getById: (userId: string) => {
+      return UserModel.findById(userId);
+    },
   };
 };

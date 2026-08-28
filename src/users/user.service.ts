@@ -10,6 +10,7 @@ import { UserRepository } from "./user.repository.interface";
 export interface UserService {
   registerUser: (user: Omit<User, "_id">) => Promise<NewCreatedUser>;
   getUserByEmail: (email: string) => Promise<User | null>;
+  getUser: (userId: string) => Promise<User | null>;
   checkPassword: (plainText: string, hashPassword: string) => Promise<boolean>;
   generateAuthToken: (user: User) => Promise<string>;
 }
@@ -39,6 +40,9 @@ export const userServiceFactory: (
     },
     getUserByEmail: (email: string) => {
       return userRepository.getByEmail(email);
+    },
+    getUser: (userId: string) => {
+      return userRepository.getById(userId);
     },
     checkPassword: (plainText: string, hashPassword: string) => {
       return checkPassword(plainText, hashPassword);
