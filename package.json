@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist-server',{recursive:true,force:true})\"",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "build:dev": "tsc -w",
     "start:dev": "node --env-file=.development.env dist-server/index.js",
     "start:prod": "node --env-file=.production.env dist-server/index.js",
     "start:dev:w": "node --watch dist-server/index.js",
-    "test": "node --test dist-server",
+    "test": "node --test \"dist-server/**/*.test.js\"",
     "build:test": "tsc -p tsconfig.testing.json",
     "build:test:dev": "tsc -w -p tsconfig.testing.json",
-    "test:integ": "node --env-file=.testing.env --test dist-test/test/*.test.js"
+    "test:integ": "node --env-file=.testing.env --test dist-test/test/*.test.js",
+    "verify": "npm run build && npm test"
   },
   "keywords": [],
   "author": "",
