@@ -2,3 +2,7 @@ dist-*
 node_modules
 .env
 *.env
+
+# Configuration Claude Code personnelle — ne se versionne pas (cf. épisode 09)
+CLAUDE.local.md
+.claude/settings.local.json
