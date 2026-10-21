@@ -1,0 +1,14 @@
+{
+  "name": "explore-demo",
+  "description": "Plugins de la série « Fondamentaux de Claude Code »",
+  "owner": {
+    "name": "rblmdst"
+  },
+  "plugins": [
+    {
+      "name": "express-3tiers",
+      "source": "./plugins/express-3tiers",
+      "description": "Créer un domaine 3-tiers Express + TypeScript et normaliser les fichiers édités"
+    }
+  ]
+}

@@ -1,21 +1,33 @@
 ---
 description: >
   Crée un nouveau domaine métier complet en architecture 3-tiers (interface, model, repository,
-  service, controller, routes et tests), en suivant le pattern de src/employees/. À utiliser quand
-  l'utilisateur demande d'ajouter une nouvelle entité ou un nouveau domaine à l'API. Passer le
-  nom du domaine au singulier et en minuscules, par exemple "project" ou "invoice".
+  service, controller, routes et tests), en suivant le pattern du domaine de référence du projet.
+  À utiliser quand l'utilisateur demande d'ajouter une nouvelle entité ou un nouveau domaine à
+  l'API. Passer le nom du domaine au singulier et en minuscules, par exemple "project" ou "invoice".
 argument-hint: [nom-du-domaine-au-singulier]
 ---
 
-Crée le domaine `$0` dans `src/$0s/`, en suivant **exactement** le pattern de `src/employees/`.
+## Configuration du projet
+
+!`cat .claude/express-3tiers.json 2>/dev/null || echo "CONFIGURATION ABSENTE"`
+
+Si la ligne ci-dessus affiche `CONFIGURATION ABSENTE`, arrête-toi et demande à l'utilisateur de
+créer `.claude/express-3tiers.json` à partir de l'exemple livré avec le plugin :
+`${CLAUDE_PLUGIN_ROOT}/config/express-3tiers.example.json`.
+
+Sinon, le **domaine de référence** est le dossier indiqué par `referenceDomain`.
+
+## La tâche
+
+Crée le domaine `$0` dans `src/$0s/`, en suivant **exactement** le pattern du domaine de
+référence.
 
 Si `$0` est vide, demande à l'utilisateur le nom du domaine et arrête-toi là.
 
 ## Ce qu'il existe déjà — à lire avant d'écrire
 
-Le domaine de référence, à imiter fichier par fichier :
-
-!`ls -1 src/employees/`
+Liste le dossier du domaine de référence et lis chacun de ses fichiers : ce sont les modèles à
+imiter, fichier par fichier.
 
 ## Fichiers à produire
 

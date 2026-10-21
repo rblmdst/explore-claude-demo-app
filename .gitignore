@@ -3,6 +3,6 @@ node_modules
 .env
 *.env
 
-# Configuration Claude Code personnelle — ne se versionne pas (cf. épisode 09)
+# Configuration Claude Code personnelle — ne se versionne pas (cf. épisode 10)
 CLAUDE.local.md
 .claude/settings.local.json

@@ -1,0 +1,9 @@
+{
+  "name": "express-3tiers",
+  "version": "0.2.0",
+  "description": "Créer un domaine 3-tiers Express + TypeScript et normaliser les fichiers édités",
+  "author": {
+    "name": "rblmdst"
+  },
+  "keywords": ["express", "typescript", "3-tiers"]
+}
