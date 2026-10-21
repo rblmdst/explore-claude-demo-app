@@ -46,6 +46,7 @@ git checkout ep01-start     # le projet nu, aucune configuration Claude Code
 | `ep07-start` | + `.claude/agents/` | 07 |
 | `ep08-start` | + `.claude/settings.json` et le hook | 08 |
 | `ep09-start` | + `.mcp.json` | 09 |
+| `ep10-start` | + le plugin `express-3tiers` (skill et hook déplacés dans `plugins/`) | 10 |
 | `serie-complete` | État final | — |
 
 Pour voir ce qu'un épisode ajoute :
